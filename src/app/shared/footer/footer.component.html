@@ -16,24 +16,24 @@
             </ul>
 
             <p class="rk-footer__text rk-footer__copy "> <span class="ae-u-bold">© </span>
-                <span class="ae-u-bolder">{{ anio }} {{ infoService.info.nombre_corto }} </span> Todos los derechos reservados.
+                <span class="ae-u-bolder">{{ anio }} {{ infoService.info['nombre_corto'] }} </span> Todos los derechos reservados.
             </p>
 
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-            <a target="_blank" [href]=" infoService.info.facebook " class="rk-social-btn ">
+            <a target="_blank" [href]=" infoService.info['facebook'] " class="rk-social-btn ">
                 <svg>
             <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
           </svg></a>
-            <a target="_blank" [href]=" infoService.info.twitter " class="rk-social-btn ">
+            <a target="_blank" [href]=" infoService.info['twitter'] " class="rk-social-btn ">
                 <svg>
             <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
           </svg></a>
-            <a target="_blank" [href]=" infoService.info.instagram " class="rk-social-btn ">
+            <a target="_blank" [href]=" infoService.info['instagram'] " class="rk-social-btn ">
                 <svg>
             <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
           </svg></a>
-            <a target="_blank" [href]=" infoService.info.tublr " class="rk-social-btn ">
+            <a target="_blank" [href]=" infoService.info['tublr'] " class="rk-social-btn ">
                 <svg>
             <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
           </svg>
@@ -41,7 +41,7 @@
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
             <p class="rk-footer__text rk-footer__contact "> <span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> 
-                <a target="_blank" [href]=" infoService.info.email " class="rk-dark-color "> {{ infoService.info.email }} </a>
+                <a target="_blank" [href]=" infoService.info['email'] " class="rk-dark-color "> {{ infoService.info['email'] }} </a>
             </span>
             </p>
             <p class="rk-footer__text rk-footer__by">Theme by
