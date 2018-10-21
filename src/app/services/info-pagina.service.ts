@@ -7,20 +7,11 @@ import { Portafolio } from '../interfaces/info.interface';
 })
 export class InfoPaginaService {
 
-  info: Portafolio = {
-   'titulo': '',
-   'sub_titulo': '',
-   'email': '',
-   'nombre_corto': '',
-   'pagina_autor': '',
-   'facebook': '',
-   'twitter': '',
-   'instagram': '',
-   'tublr': '',
-   'equipo_trabajo': []
-  };
+  info: Portafolio[] = [];
 
   cargada = false;
+
+  angularUrl = 'https://angular-html-833dd.firebaseio.com/equipo.json';
 
   constructor(
     private _httpClient: HttpClient
@@ -28,11 +19,17 @@ export class InfoPaginaService {
 
     // leer el archivo json
 
-    this._httpClient.get('src/assets/data/data-pagina.json')
-          .subscribe( (data: Portafolio) => {
+    this._httpClient.get('assets/data/data-pagina.json')
+          .subscribe( (data: Portafolio[]) => {
             this.cargada = true;
             this.info = data;
           });
+
+  }
+
+   cargarEquipo() {
+
+    return this._httpClient.get( this.angularUrl );
 
   }
 
